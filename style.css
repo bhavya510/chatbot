@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.chat-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-box {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  max-width: 90%;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.message i {
+  margin-right: 10px;
+}
+
+.input-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.user-input:focus {
+  border-color: #007bff;
+}
+
+.send-btn,
+.voice-btn,
+.clear-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.voice-btn {
+  margin-left: 10px;
+}
+
+.clear-btn {
+  background-color: #dc3545;
+  margin-left: 10px;
+}
+
+.send-btn:hover,
+.voice-btn:hover,
+.clear-btn:hover {
+  background-color: #0056b3;
+}
+
+.voice-btn i {
+  font-size: 20px;
+}
+
+@media (max-width: 480px) {
+  .chat-container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .user-input {
+    width: 55%;
+  }
+
+  .send-btn,
+  .voice-btn,
+  .clear-btn {
+    padding: 10px;
+  }
+}
+
+/* Chatbot Name Header */
+.chat-header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 20px;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Footer Styles */
+.footer {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  padding: 10px 0;
+}
